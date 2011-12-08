@@ -405,20 +405,17 @@ a.button {
 }
 
 .button:link,
-#forum .button:link,
 .button:visited,
-#forum .button:visited,
 .button:hover,
-#forum .button:hover,
 .button:focus,
-#forum .button:focus,
 .button:active,
-#forum .button:active {
   color: #3e3e3e;
   text-decoration: none;
 }
 
-input[type=submit].button-yellow {
+input[type=submit].button-yellow,
+.button-yellow,
+.button-yellow:link {
   background: #d3981c;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6db5b', endColorstr='#d3981c');
   background: -webkit-gradient(linear, left top, left bottom, from(#e6db5b), to(#d3981c));
@@ -427,7 +424,8 @@ input[type=submit].button-yellow {
   color: #684b0d;
 }
 
-input[type=submit].button-yellow:hover {
+input[type=submit].button-yellow:hover,
+.button-yellow:hover {
   border: 1px solid rgba(255, 255, 255, .35);
 }
 
@@ -450,13 +448,13 @@ input[type=submit].button-red {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, .25);
 }
 
+input[type=submit].button-green,
 .button-green,
-#forum .button-green,
-#forum .button-green:link,
-#forum .button-green:visited,
-#forum .button-green:hover,
-#forum .button-green:focus,
-#forum .button-green:active {
+#forum a.button.button-green,
+.button-green:link,
+#forum a.button.button-green:link,
+.forum-add-node .button,
+.forum-add-forum .button:active {  
   background: #d3981c;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cae187', endColorstr='#a1c959');
   background: -webkit-gradient(linear, left top, left bottom, from(#cae187), to(#a1c959));
@@ -465,7 +463,18 @@ input[type=submit].button-red {
   color: #516724;
 }
 
-input[type=submit]:hover {
+input[type=submit].button-green:hover,
+.button-green:hover,
+.forum-add-node .button:hover,
+.forum-add-forum .button:hover {
+  border: 1px solid rgba(255, 255, 255, .25);
+  -moz-box-shadow: 0 0 10px rgba(223, 208, 108, .75);
+  -webkit-box-shadow: 0 0 10px rgba(223, 208, 108, .75);
+  box-shadow: 0 0 10px rgba(211, 152, 28, .75);
+}
+
+input[type=submit]:hover,
+.button:hover {
   border: 1px solid rgba(255, 255, 255, .25);
   -moz-box-shadow: 0 0 10px rgba(223, 208, 108, .75);
   -webkit-box-shadow: 0 0 10px rgba(223, 208, 108, .75);

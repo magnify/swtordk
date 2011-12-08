@@ -146,3 +146,68 @@ function swtor_breadcrumb($variables) {
 
   return $output;
 }
+
+/**
+ * Theme function to display a link, optionally buttonized.
+ */
+function swtor_advanced_forum_l(&$variables) {
+  $text = $variables['text'];
+  $path = empty($variables['path']) ? NULL : $variables['path'];
+  $options = empty($variables['options']) ? array() : $variables['options'];
+  $button_class = empty($variables['button_class']) ? NULL : $variables['button_class'];
+
+  $l = '';
+  if (!isset($options['attributes'])) {
+    $options['attributes'] = array();
+  }
+  if (!is_null($button_class)) {
+    // Buttonized link: add our button class and the span.
+    if (!isset($options['attributes']['class'])) {
+      $options['attributes']['class'] = array("button");
+    }
+    else {
+      $options['attributes']['class'][] = "button";
+    }
+    $options['html'] = TRUE;
+    $l = l('<span>' . $text . '</span>', $path, $options);
+  }
+  else {
+    // Standard link: just send it through l().
+    $l = l($text, $path, $options);
+  }
+
+  return $l;
+}
+
+/**
+ * Theme function to format the reply link at the top/bottom of topic.
+ */
+function swtor_advanced_forum_reply_link(&$variables) {
+  $node = $variables['node'];
+
+  // Get the information about whether the user can reply and the link to do
+  // so if the user is allowed to.
+  $reply_link = advanced_forum_get_reply_link($node);
+
+  if (is_array($reply_link)) {
+    // Reply is allowed. Variable contains the link information.
+    $output = '<div class="topic-reply-allowed">';
+    $output .= theme('advanced_forum_l', array(
+      'text' => $reply_link['title'],
+      'path' => $reply_link['href'],
+      'options' => $reply_link['options'],
+      'button_class' => 'large'
+        ));
+    $output .= '</div>';
+    return $output;
+  }
+  elseif ($reply_link == 'reply-locked') {
+    // @TODO: The double span here is icky but I don't know how else to get
+    // around the fact that there's no "a" to put the button class on.
+    return '<div class="topic-reply-locked"><span class="button button-red"><span>' . t('Topic locked') . '</span></span></div>';
+  }
+  elseif ($reply_link == 'reply-forbidden') {
+    // User is not allowed to reply to this topic.
+    return theme('comment_post_forbidden', array('node' => $node));
+  }
+}

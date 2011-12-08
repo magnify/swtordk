@@ -610,6 +610,6 @@ tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span.new {
 
 .forum-topic-header .topic-reply-link {
   display: block;
-  float: none;
-  margin: 0 0 1.9em;
+  float: left;
+  margin: 0 .5em 1.9em 0;
 }
