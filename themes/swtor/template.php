@@ -13,6 +13,10 @@ if (theme_get_setting('swtor_rebuild_registry')) {
 function swtor_preprocess_html(&$vars) {
   // Add conditional CSS for IE9 and below.
   drupal_add_css(path_to_theme() . '/styles/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
+
+  // Add tor tooltip javascript.
+  drupal_add_js('http://tor.zamimg.com/tooltips.js', 'external');
+  
 }
 
 /**
