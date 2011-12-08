@@ -2,10 +2,6 @@ img {
   max-width: none;
 }
 
-#block-user-login #user-login-form {
-  width: 425px;
-}
-
 input[type=submit],
 .button {
   border-radius: 0;

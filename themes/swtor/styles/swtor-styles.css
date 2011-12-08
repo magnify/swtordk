@@ -47,7 +47,7 @@ img {
 
 #block-user-login #user-login-form {
   padding: 0 0 0 10px;
-  width: 415px;
+  width: 425px;
 }
 
 #block-user-login label {
@@ -726,6 +726,10 @@ input[type=submit]:hover {
   float: left;
   margin: 5px 0 0;
   width: 105px;
+}
+
+.tweetbutton {
+  width: 83px;
 }
 
 .fb-social-like-plugin iframe {
