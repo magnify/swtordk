@@ -138,7 +138,7 @@ img {
 
 #header .nice-menu li.menuparent a {
   background: url('../images/menu-arrow-down.png') no-repeat center right;
-  padding: 8px 30px;
+  padding: 8px 30px 8px 20px;
 }
 
 /*--- Main menu second level ---*/
