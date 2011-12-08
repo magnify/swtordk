@@ -15,8 +15,7 @@ function swtor_preprocess_html(&$vars) {
   drupal_add_css(path_to_theme() . '/styles/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 
   // Add tor tooltip javascript.
-  drupal_add_js('http://tor.zamimg.com/tooltips.js', 'external');
-  
+  drupal_add_js('http://tor.zamimg.com/tooltips.js', 'external');  
 }
 
 /**
