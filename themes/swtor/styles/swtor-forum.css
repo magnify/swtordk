@@ -298,6 +298,16 @@ div.forum-post {
   font-size: .9em;
 }
 
+.forum-topic-legend {
+  clear: both;
+}
+
+.forum-topic-legend div {
+  clear: none;
+  display: inline;
+  margin: 0 .5em 0 0;
+}
+
 .forum-post-links {
   margin: 5px;
 }
