@@ -257,26 +257,26 @@ img {
 }
 
 #sidebar-second h2,
-.sidebar-second h2 {
+div.sidebar-second h2 {
   background: url('../images/common-pattern.png');
   margin: 0 0 15px;
   padding: 10px 10px 6px;
 }
 
 #sidebar-second .block,
-.sidebar-second .block {
+div.sidebar-second .block {
   margin: 0 0 20px;
 }
 
 #sidebar-second .content,
-.sidebar-second .content {
+div.sidebar-second .content {
   overflow: hidden;
   margin: 0;
 }
 
 #sidebar-second .region,
-.sidebar-second .region.panel-pane,
-.sidebar-second .region.pane-block {
+div.sidebar-second .region.panel-pane,
+div.sidebar-second .region.pane-block {
   padding: 0 0 20px 20px;
   margin: 0 -20px 0 0;
 }
@@ -284,9 +284,9 @@ img {
 #sidebar-second .region.adsense,
 #sidebar-second .region.panel-pane.adsense,
 #sidebar-second .region.pane-block.adsense,
-.sidebar-second .region.adsense,
-.sidebar-second .region.panel-pane.adsense,
-.sidebar-second .region.pane-block.adsense {
+div.sidebar-second .region.adsense,
+div.sidebar-second .region.panel-pane.adsense,
+div.sidebar-second .region.pane-block.adsense {
   background-color: #000;
   left: 0;
   margin: 0;
@@ -296,7 +296,7 @@ img {
 }
 
 #sidebar-second .advertisement p,
-.sidebar-second .advertisement p {
+div.sidebar-second .advertisement p {
   margin: 0;
 }
 
@@ -865,20 +865,20 @@ div.workbench-info-block {
 
 /*--- Sidebar second view ---*/
 
-.sidebar-second .view .item-list ul li {
+div.sidebar-second .view .item-list ul li {
   background: none;
   list-style: none;
   margin: 0 0 10px 45px;
 }
 
-.sidebar-second .view .item-list img {
+div.sidebar-second .view .item-list img {
   margin: 5px 0 0 -55px;
   max-width: 45px;
   width: 45px;
 }
 
-.sidebar-second .view .views-field-field-image-url,
-.sidebar-second .view .views-field-field-user-picture {
+div.sidebar-second .view .views-field-field-image-url,
+div.sidebar-second .view .views-field-field-user-picture {
   float: left;
 }
 
