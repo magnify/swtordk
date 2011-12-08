@@ -1,0 +1,413 @@
+body {
+  font: 12px "DroidSansRegular",Arial,sans-serif;
+  line-height: 18px;
+  color: #9a9a9a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*--- Editor ---*/
+.cke_show_borders {
+  background-color: #191919; 
+}
+
+/*--- Editor font styles ---*/
+.align-left {
+  float: left;
+  margin-right: 1em;
+}
+
+.align-left img {
+  margin-top: 0;
+}
+
+.align-center {
+  display: block;
+  text-align: center;
+}
+
+.align-center * {
+  margin: auto;
+}
+
+.align-right {
+  float: right;
+  margin-left: 1em;
+}
+
+.align-right img {
+  margin-top: 0;
+}
+
+.element-spacing {
+  clear: both;
+  padding: 1.5em 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+blockquote {
+  background: url('../images/sprites.png') no-repeat -920px -37px;
+  font-style: italic;
+  margin: 2.5em;
+  padding-left: 40px;
+}
+
+.node ul, 
+.node ol {
+  margin-bottom: 0.5em;
+  margin-left: 20px;
+}
+
+.node ul>li,
+.node ol>li {
+  margin-bottom: 0.2em;
+}
+
+em {
+  font-style: italic;
+}
+
+quote {
+  font-style: italic;
+}
+
+strong, bold {
+  font-weight: bold;
+}
+
+/* ----- / Headings ----- */
+h1, h2, h3, h4, h5 {
+  color: #fff;
+  font-family: "TitilliumText22LRegular", Arial, sans-serif;
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  line-height: 40px;
+  margin: 0 0 15px;
+}
+
+.front h1 {
+  color: #acacac;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 24px;
+  line-height: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+.header-link,
+.header-link a:link,
+.header-link a:visited,
+.header-link a:hover,
+.header-link a:focus,
+.header-link a:active {
+  color: #fff;
+}
+
+/* ----- / Links ----- */
+
+a,
+a:link {
+  color: #ffba00;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ecc459;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #d69f09;
+  text-decoration: underline;
+}
+
+/*--- Lists ---*/
+
+ul {
+}
+
+li {
+  list-style: square inside;
+}
+
+li a,
+li a.active {
+    color: #fff;
+}
+
+/*--- Item list ---*/
+
+.item-list ul li a,
+.item-list ul li a:link {
+  color: #9a9a9a;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+.item-list ul li a:hover {
+  color: #ffba00;
+}
+
+/*--- User login ---*/
+
+#block-user-login label {
+  font-size: 90%;
+  font-weight: normal;
+}
+
+#block-user-login label a,
+#block-user-login label a:hover {
+  text-decoration: none;
+}
+
+#block-user-login .new-user {
+  font-size: 125%;
+  font-weight: bold;
+}
+
+#block-user-login .new-user a {
+  text-decoration: none;
+}
+
+#block-user-login .new-user a:hover {
+  color: #ffba00;
+  text-decoration: underline;
+}
+
+/*--- Main-menu ---*/
+
+.nice-menu li a {
+  color: #fff;
+  font-family: "TitilliumText22LRegular", Arial, sans-serif;
+  text-decoration: none;
+}
+
+.nice-menu li a:hover {
+  color: #ffba00;
+}
+
+.node .content a {
+  text-decoration: none;
+}
+
+.node .content a:link {
+}
+
+.node .content a:visited {
+}
+
+.node .content a:hover,
+.node .content a:active {
+  border: none;
+  margin-bottom: 0;
+}
+
+/*--- Sidebar second ---*/
+
+.sidebar-second h2 {
+  color: #aaa;
+  font-family: "TitilliumText22LRegular", Arial, sans-serif;
+  font-size: 140%;
+}
+
+/*--- Breadcrumb ---*/
+#breadcrumb {
+  font-size: 11px;
+}
+
+/*--- Articles ---*/
+
+#content .content .articles .article {
+  color: #8b8b8b;
+}
+
+#content .content .articles .article h2 {
+  font-size: 30px;
+  margin: 5px 0 15px;
+}
+
+#content .content .articles .article h2 a,
+#content .content .articles .article h2 a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#content .content .articles .article h2 a:visited,
+#content .content .articles .article h2 a:hover,
+#content .content .articles .article h2 a:focus,
+#content .content .articles .article h2 a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#content .content .articles .article .tags a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#content .content .articles .article .date {
+  color: #8b8b8b;
+}
+
+/*--- Featured content ---*/
+
+.view-featured-content .content-wrapper a.title,
+.view-featured-content .content-wrapper a.teaser {
+  color: #fff;
+  line-height: 125%;
+}
+
+.view-featured-content .content-wrapper a.title {
+  font-size: 100%;  
+}
+
+.view-featured-content .content-wrapper a.teaser {
+  font-size: 100%;
+}
+
+.view-featured-content .content-wrapper a:visited,
+.view-featured-content .content-wrapper a:hover,
+.view-featured-content .content-wrapper a:active {
+  text-decoration: none;
+}
+
+/*--- Pager ---*/
+
+.item-list .pager {
+  color: #fff;
+}
+
+.item-list .pager li.pager-current {
+  font-weight: normal;
+}
+
+.item-list .pager a {
+}
+
+/*--- Sidebar second view ---*/
+
+.sidebar-second .view .item-list .views-field-title a {
+  color: #ffb800;
+}
+
+.sidebar-second .view .views-field-field-news-teaser,
+.sidebar-second .view .views-field-created {
+  color: #9a9a9a;
+  font-size: 90%;
+}
+  
+.sidebar-second .view .views-field-created {
+  color: #555555;
+}
+
+/*--- Infinite scroll ---*/
+
+#views_infinite_scroll_ajax_load_link a:hover {
+  text-decoration: none;
+}
+
+/*--- Submenu ---*/
+
+#sidebar-first .block-menu-block {
+  font-size: 90%;
+}
+
+#sidebar-first .block-menu-block h2 a {
+  color: #fff;
+  font-size: 50%;
+  font-weight: normal;
+}
+
+/*--- Spotbox ---*/
+
+.block-nodespotbox {
+  font-size: 85%;
+}
+
+.block-nodespotbox h2 {
+  font-size: 175%;
+  font-weight: normal;
+}
+
+.block-nodespotbox h2 a,
+.block-nodespotbox {
+  color: #acacac;
+}
+
+.block-nodespotbox h2 a:hover {
+  text-decoration: none;
+}
+
+.block-nodespotbox .view .content,
+.block-nodespotbox .view .link {
+  
+}
+
+/*--- Gallery ---*/
+
+.field-name-field-page-gallery .field-label {
+  font-family: "TitilliumText22LRegular", Arial, sans-serif;
+  color: #acacac;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+/*--- Footer ---*/
+
+#footer h2 {
+  font-size: 1.33em;
+}
+
+#footer ul li a,
+#footer ul li a:link {
+  color: #9a9a9a;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+#footer ul li a:hover {
+  color: #ffba00;
+}
+
+#footer ul li span {
+  color: #555;
+  font-size: 90%;
+}
+
+#footer-links,
+#footer-copyright {
+  font-size: .9em;
+}
+
+#footer-copyright {
+  color: #545454;
+}
+  

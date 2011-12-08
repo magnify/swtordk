@@ -1,0 +1,22 @@
+img {
+  max-width: none;
+}
+
+#block-user-login #user-login-form {
+  width: 425px;
+}
+
+input[type=submit],
+.button {
+  border-radius: 0;
+  padding: 8px 7px 7px;
+}
+
+.view-featured-content .content-wrapper {
+  width: 620px;
+}
+
+.view-featured-content .content-wrapper a.title {
+  padding-right: 0;
+  width: 525px;
+}

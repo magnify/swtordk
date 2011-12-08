@@ -1,0 +1,39 @@
+name = swtor.dk
+description = Theme for the Danish Star Wars: The Old Republic community site
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = styles/swtor-reset-min.css
+stylesheets[all][] = styles/swtor-grid.css
+stylesheets[all][] = styles/swtor-styles.css
+stylesheets[all][] = styles/swtor-typography.css
+stylesheets[all][] = font-kits/titillium/titillium.css
+stylesheets[all][] = font-kits/droid-sans/droid-sans.css
+stylesheets[all][] = styles/nice_menus.css
+stylesheets[all][] = styles/nice_menus_default.css
+stylesheets[all][] = styles/swtor-forum.css
+
+regions[header] = Header
+regions[pagetop] = Page top
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[column_three_one] = 3 column 1
+regions[column_three_two] = 3 column 2
+regions[column_three_three] = 3 column 3
+regions[column_four_one] = 4 column 1
+regions[column_four_two] = 4 column 2
+regions[column_four_three] = 4 column 3
+regions[column_four_four] = 4 column 4
+regions[footer] = Footer
+regions[footer_links] = Footer links
+regions[footer_first] = Footer first
+regions[footer_second] = Footer second
+regions[footer_third] = Footer third
+regions[footer_copyright] = Footer copyright
+
+;Panels layouts
+plugins[panels][layouts] = plugins/layouts
+
+scripts[] = scripts/social.js

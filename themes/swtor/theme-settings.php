@@ -1,0 +1,26 @@
+<?php
+// $Id$
+/**
+ * @file
+ * themesettings.php
+ */
+
+/**
+ * Return the theme settings' default values from the .info and save them into the database.
+ *
+ * @param $theme
+ *   The name of theme.
+ */
+
+function swtor_form_system_theme_settings_alter(&$form, $form_state) {
+
+  $form['development']['swtor_rebuild_registry'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Rebuild theme registry on every page.'),
+    '#default_value' => theme_get_setting('swtor_rebuild_registry'),
+    '#description'   => t('During theme development, it can be very useful to continuously <a href="!link">rebuild the theme registry</a>. WARNING: this is a huge performance penalty and must be turned off on production websites.', array('!link' => 'http://drupal.org/node/173880#theme-registry')),
+  );
+  
+}
+
+?>
