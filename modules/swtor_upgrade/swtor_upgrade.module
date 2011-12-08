@@ -1,0 +1,70 @@
+<?php
+
+/*
+ * You must implement hook_migrate_api(), setting the API level to 2, for
+ * your migration classes to be recognized by the Migrate module.
+ */
+function swtor_upgrade_migrate_api() {
+  $api = array(
+    'api' => 2,
+  );
+  return $api;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function swtor_upgrade_menu() {
+//  $items['nuke'] = array(
+//    'title' => 'Nuke the database',
+//    'page callback'=> 'swtor_upgrade_nuke',
+//    'access arguments' => array('administer site'),
+//   'type'=> MENU_CALLBACK,
+//  );
+
+//  return $items;
+}
+
+/**
+ * Before runing the migration you will want to get rid of all the test data. So
+ * run this function and 'drush mw aritcle', 'drush mw forum'
+ *
+ */
+function swtor_upgrade_nuke() {
+  // Remove comments
+  $cids_obj = db_select('comment', 'c')
+              ->fields('c', array('cid'))
+              ->execute()
+              ->fetchAll();
+  $cids = array();
+  foreach ($cids_obj as $cid) {
+    $cids[] = $cid->cid;
+  }
+  comment_delete_multiple($cids);
+
+  // Remove all users.
+  db_delete('users')->condition('uid', '0', '!=')->condition('uid', '1', '!=')->execute();
+
+  // Update all "the rest" of the content to be written by admin. This will
+  // remove user load errors.
+  db_update('node')
+          ->fields(array('uid' => 1))
+          ->condition('uid', '1', '!=')
+          ->execute();
+
+  echo 'The site have been cleaned out and is ready for mirgation.<br />';
+  echo 'Start by running: drush mw articles and drush mw forum<br />';
+  echo 'Run the migration...';
+}
+
+/**
+ * Base class used by the migration objects. Used to setup some basic options.
+ */
+abstract class SwtorMigration extends Migration {
+  protected $source_db = 'swtor_dk';
+  protected $source_path = '/home/cableman/drupal/swtor_dk/htdocs';
+
+  public function __construct() {
+    parent::__construct(MigrateGroup::getInstance('swtor'));
+  }
+}

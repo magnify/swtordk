@@ -1,0 +1,16 @@
+name = "Upgrade swtor content from D6 to D7"
+description = "Migration users, articles and forums."
+package = "Development"
+core = 7.x
+dependencies[] = taxonomy
+dependencies[] = image
+dependencies[] = comment
+dependencies[] = migrate
+
+
+files[] = swtor_migrate.module
+
+files[] = users.inc
+files[] = articles.inc
+files[] = forum.inc
+files[] = comments.inc

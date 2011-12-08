@@ -1,0 +1,76 @@
+#swtor-account {
+  padding: 15px 10px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 65px;
+}
+
+#swtor-account .content a:hover {
+  color: #ffba00;
+}
+
+#swtor-account.expanded {
+  background-color: #2a2a2a;
+}
+
+#swtor-account .account-name {
+  color: #747474;
+  display: block;
+  font-family: "TitilliumText22LRegular", Arial, sans-serif;
+  font-size: 150%;
+  margin: 0 0 5px;
+  text-decoration: none;
+}
+
+#swtor-account .account-name .username {
+  color: #ccc;
+  font-weight: bold;
+  margin: 0 0 0 5px;
+  padding: 0 18px 0 0;
+}
+
+#swtor-account .content {
+  display: none;
+  text-align: left;
+  z-index: 100;
+}
+
+#swtor-account .content li {
+  background-position: 0 7px;
+  padding: 0 0 0 10px;
+}
+
+#swtor-account .content a {
+  color: #888;
+}
+
+#swtor-account .bottom-wrapper {
+  border-top: 1px dashed #404240;
+  font-size: 90%;
+  padding-top: 5px;
+}
+
+#swtor-account .bottom-wrapper a:hover {
+  text-decoration: none;
+}
+
+#swtor-account .swtor-account-messages {
+  float: left;
+}
+
+#swtor-account .swtor-account-messages li {
+  list-style: none;
+  padding: 0;
+}
+
+#swtor-account .content .logout {
+  color: #ffba00;
+  display: none;
+  float: right;
+  font-weight: bold;
+}
+
+#swtor-account .content .logout:hover {
+  color: #ffd76c;
+}

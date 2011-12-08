@@ -1,0 +1,99 @@
+<?php
+
+/**
+ * Implementation of hook_permission().
+ */
+function swtor_account_permission() {
+  return array(
+    'swtor account' => array(
+      'title' => t("Use swtor account information"),
+      'description' => t("Display a block with dropdown account information"),
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function swtor_account_block_info() {
+  return array(
+    array(
+      'info' => 'Account information'
+    )
+  );
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function swtor_account_block_view($delta) {
+  $block = array();
+
+  if (user_access('swtor account')) {
+    $block['content'] = theme('swtor_account');
+  }
+
+  return $block;
+}
+
+/**
+ * Implementation of hook_theme()
+ */
+function swtor_account_theme() {
+  $theme = array();
+
+  $theme['swtor_account'] = array(
+    'variables' => array(),
+    'path' => drupal_get_path('module', 'swtor_account') . '/templates',
+    'template' => 'swtor-account',
+  );
+
+  return $theme;
+}
+
+/**
+ * Implements hook_preprocess_swtor_account().
+ */
+function swtor_account_preprocess_swtor_account(&$vars) {
+  // Headline
+  $uid = $vars['user']->uid;
+  $vars['username'] = $vars['user']->name;
+  
+  // Build account links.
+  $links = array(
+    'attributes' => array(
+       'class' => 'swtor-account-links'
+     ),
+    'links' => array(
+       'my-account' => array(
+         'title' => t('My profile'),
+         'href' => 'user/' . $uid,
+       ),
+       'edit-account' => array(
+         'title' => 'Edit account',
+         'href' => 'user/' . $uid . '/edit',
+       ),
+     ),
+  );
+  $vars['links_raw'] = $links;
+  $vars['links'] = theme('links', $links);
+
+  // Build message count link (unread messages).
+  $messages = array(
+    'attributes' => array(
+      'class' => 'swtor-account-messages'
+    ),
+    'links' => array(
+      'msg-account' => array(
+        'title' => t('Messages (!count)', array('!count' => privatemsg_unread_count())),
+        'href' => 'messages/list',
+      ),
+    ),
+  );
+  $vars['message_raw'] = $messages;
+  $vars['messages'] = theme('links', $messages);
+
+  // Add style and js
+  drupal_add_css(drupal_get_path('module', 'swtor_account') . '/css/swtor-account.css');
+  drupal_add_js(drupal_get_path('module', 'swtor_account') . '/js/swtor-account.js');
+}

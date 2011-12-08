@@ -1,0 +1,6 @@
+name = Account information dropdown.
+description = Provides an account block with usefull links.
+package = Swtor
+core = 7.x
+
+files[] = swtor_account.module

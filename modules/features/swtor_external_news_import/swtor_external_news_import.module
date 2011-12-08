@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Code for the Featured content feature.
+ */
+
+include_once('swtor_external_news_import.features.inc');
+
+/**
+ * Defines a new feeds parser to parse news feeds from swtor.com and get the
+ * image from the source into drupal entities.
+ *
+ * @return array $info
+ */
+function swtor_external_news_import_feeds_plugins() {
+  $info = array();
+  $info['NewsParser'] = array(
+    'name' => "News Parser",
+    'description' => t('Parse news feed'),
+    'handler' => array(
+      'parent' => 'FeedsParser',
+      'class' => 'NewsParser',
+      'file' => 'news_parser.class.inc',
+      'path' => drupal_get_path('module', 'swtor_external_news_import'),
+    ),
+  );
+  return $info;
+}
+
+/**
+ * Make sure that the feed parser cache is cleared on module activation.
+ */
+function swtor_external_news_import_enable() {
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}
