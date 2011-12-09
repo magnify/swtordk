@@ -986,6 +986,7 @@ div#views_infinite_scroll-ajax-loader {
 }
 
 .block-nodespotbox h2,
+div.block-nodespotbox h2,
 .block-nodespotbox .view .content,
 .block-nodespotbox .link {
   background: #1d1d1d;
