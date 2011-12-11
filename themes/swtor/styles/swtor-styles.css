@@ -1154,6 +1154,7 @@ span.cke_skin_kama {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+input[type="submit"],
 .btn {
     -moz-border-bottom-colors: none;
     -moz-border-image: none;
@@ -1172,9 +1173,9 @@ span.cke_skin_kama {
     color: #333333;
     cursor: pointer;
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     line-height: normal;
-    padding: 6px 14px 6px;
+    padding: 5px 12px 5px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 }
 
