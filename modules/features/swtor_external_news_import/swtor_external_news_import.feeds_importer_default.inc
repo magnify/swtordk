@@ -33,7 +33,7 @@ function swtor_external_news_import_feeds_importer_default() {
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
         'content_type' => 'external_news',
-        'expire' => '2419200',
+        'expire' => '2592000',
         'author' => 0,
         'mappings' => array(
           0 => array(
