@@ -2,12 +2,6 @@ img {
   max-width: none;
 }
 
-input[type=submit],
-.button {
-  border-radius: 0;
-  padding: 8px 7px 7px;
-}
-
 .view-featured-content .content-wrapper {
   width: 620px;
 }

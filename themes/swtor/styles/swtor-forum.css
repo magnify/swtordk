@@ -341,19 +341,21 @@ div.forum-post {
   color: #acacac;
 }
 
-#forum a,
-#forum a:link {
+#forum table a,
+#forum .pager a,
+#forum table a:link,
+#forum .pager a:link {
   color: #ffba00;
   text-decoration: none;
 }
 
-#forum a:visited {
+#forum table a:visited {
   color: #ecc459;
 }
 
-#forum a:hover,
-#forum a:focus,
-#forum a:active {
+#forum table a:hover,
+#forum table a:focus,
+#forum table a:active {
   color: #d69f09;
   text-decoration: none;
 }

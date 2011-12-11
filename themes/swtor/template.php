@@ -34,7 +34,7 @@ function swtor_form_user_login_block_alter(&$form, &$form_state, $form_id) {
   $form['pass']['#title'] = t('Password') . ' (<a href="/user/password" title="' . t('Forgot it?') .'" tabindex="3">' . t('Forgot it?') . '</a>)';
 
   // Add class to the login button and move actions into the right place.
-  $form['actions']['submit']['#attributes'] = array('class' => array('button-yellow'));
+$form['actions']['submit']['#attributes'] = array('class' => array('btn yellow'));
   $form['actions']['#weight'] = 5;
 
   // New user
@@ -154,7 +154,7 @@ function swtor_advanced_forum_l(&$variables) {
   $text = $variables['text'];
   $path = empty($variables['path']) ? NULL : $variables['path'];
   $options = empty($variables['options']) ? array() : $variables['options'];
-  $button_class = empty($variables['button_class']) ? NULL : $variables['button_class'];
+  $button_class = 'btn';
 
   $l = '';
   if (!isset($options['attributes'])) {
@@ -166,7 +166,7 @@ function swtor_advanced_forum_l(&$variables) {
       $options['attributes']['class'] = array("button");
     }
     else {
-      $options['attributes']['class'][] = "button";
+      $options['attributes']['class'][] = "btn";
     }
     $options['html'] = TRUE;
     $l = l('<span>' . $text . '</span>', $path, $options);
@@ -196,7 +196,7 @@ function swtor_advanced_forum_reply_link(&$variables) {
       'text' => $reply_link['title'],
       'path' => $reply_link['href'],
       'options' => $reply_link['options'],
-      'button_class' => 'large'
+      'button_class' => 'btn'
         ));
     $output .= '</div>';
     return $output;
@@ -204,7 +204,7 @@ function swtor_advanced_forum_reply_link(&$variables) {
   elseif ($reply_link == 'reply-locked') {
     // @TODO: The double span here is icky but I don't know how else to get
     // around the fact that there's no "a" to put the button class on.
-    return '<div class="topic-reply-locked"><span class="button button-red"><span>' . t('Topic locked') . '</span></span></div>';
+    return '<div class="topic-reply-locked"><span class="btn danger"><span>' . t('Topic locked') . '</span></span></div>';
   }
   elseif ($reply_link == 'reply-forbidden') {
     // User is not allowed to reply to this topic.
