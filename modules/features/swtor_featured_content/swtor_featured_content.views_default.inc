@@ -17,7 +17,7 @@ function swtor_featured_content_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Featured content';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -105,8 +105,10 @@ function swtor_featured_content_views_default_views() {
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['ui_name'] = 'Title (for links)';
   $handler->display->display_options['fields']['title_1']['label'] = '';
-  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = '<div class="content-wrapper">
+  <h2><a href="[path]" title="[title_1]" class="title">[title_1]</a></h2>
+</div>';
   $handler->display->display_options['fields']['title_1']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['title_1']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['title_1']['alter']['external'] = 0;
@@ -148,59 +150,6 @@ function swtor_featured_content_views_default_views() {
   $handler->display->display_options['fields']['counter']['empty_zero'] = 0;
   $handler->display->display_options['fields']['counter']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['counter']['counter_start'] = '1';
-  /* Field: Title (shown) */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['ui_name'] = 'Title (shown)';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 0;
-  /* Field: Content: Spotbox teaser */
-  $handler->display->display_options['fields']['field_teaser']['id'] = 'field_teaser';
-  $handler->display->display_options['fields']['field_teaser']['table'] = 'field_data_field_teaser';
-  $handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
-  $handler->display->display_options['fields']['field_teaser']['label'] = '';
-  $handler->display->display_options['fields']['field_teaser']['alter']['alter_text'] = 1;
-  $handler->display->display_options['fields']['field_teaser']['alter']['text'] = '<div class="content-wrapper">
-  <a href="[path]" title="[title_1]" class="title">[title]</a>
-  <a href="[path]" title="[title_1]" class="teaser">[field_teaser]</a>
-</div>';
-  $handler->display->display_options['fields']['field_teaser']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_teaser']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_teaser']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_teaser']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_teaser']['element_default_classes'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['hide_alter_empty'] = 0;
-  $handler->display->display_options['fields']['field_teaser']['field_api_classes'] = 0;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -257,6 +206,21 @@ function swtor_featured_content_views_default_views() {
   /* Display: Article slideshow */
   $handler = $view->new_display('panel_pane', 'Article slideshow', 'panel_pane_1');
   $handler->display->display_options['display_description'] = 'Slideshow used on frontpage to show the last 10 promoted article';
+  $translatables['featured_content'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<div class="content-wrapper">
+  <h2><a href="[path]" title="[title_1]" class="title">[title_1]</a></h2>
+</div>'),
+    t('Article slideshow'),
+    t('Slideshow used on frontpage to show the last 10 promoted article'),
+    t('View panes'),
+  );
   $export['featured_content'] = $view;
 
   return $export;

@@ -17,7 +17,7 @@ function swtor_external_news_import_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'External news';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -196,6 +196,22 @@ function swtor_external_news_import_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+  $translatables['external_news'] = array(
+    t('Master'),
+    t('External news'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<img src="[field_image_url]" />'),
+    t('[field_source_url]'),
+    t('Extenal news block'),
+    t('External news pane'),
+    t('Nyheder fra SWTOR.COM'),
+    t('News panes'),
+  );
   $export['external_news'] = $view;
 
   return $export;

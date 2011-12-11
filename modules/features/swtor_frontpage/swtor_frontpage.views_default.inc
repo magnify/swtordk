@@ -168,6 +168,19 @@ function swtor_frontpage_views_default_views() {
 
   /* Display: Last comments */
   $handler = $view->new_display('block', 'Last comments', 'block');
+  $translatables['front_page_comments'] = array(
+    t('Master'),
+    t('Front page comments'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Content'),
+    t('author'),
+    t('Last comments'),
+  );
   $export['front_page_comments'] = $view;
 
   $view = new view;
@@ -534,21 +547,17 @@ function swtor_frontpage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Frontpage pane (Bottom)', 'frontpage_articles_bottom');
   $handler->display->display_options['display_description'] = 'Display articles without pager';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '4';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
-  $handler->display->display_options['pager']['options']['infinite_scroll'] = array(
-    'method' => '1',
-    'link_text' => 'More articles',
-  );
   $handler->display->display_options['pane_title'] = 'Front page articles (bottom)';
   $handler->display->display_options['pane_description'] = 'Front page articles with pager';
   $handler->display->display_options['pane_category']['name'] = 'Article panes';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 'offset';
   $handler->display->display_options['allow']['link_to_view'] = 0;
   $handler->display->display_options['allow']['more_link'] = 0;
@@ -556,6 +565,36 @@ function swtor_frontpage_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+  $translatables['frontpage'] = array(
+    t('Master'),
+    t('Frontpage (articles)'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('author'),
+    t('[path]#comments'),
+    t('[comment_count]'),
+    t('.'),
+    t(' comments'),
+    t('Posted by'),
+    t('Page'),
+    t('Feed'),
+    t('Front page feed'),
+    t('Frontpage pane (Top)'),
+    t('Display articles without pager'),
+    t('Front page articles (top)'),
+    t('Front page articles without pager'),
+    t('Article panes'),
+    t('Frontpage pane (Bottom)'),
+    t('Front page articles (bottom)'),
+    t('Front page articles with pager'),
+  );
   $export['frontpage'] = $view;
 
   return $export;
