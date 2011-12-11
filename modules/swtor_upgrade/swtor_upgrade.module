@@ -61,8 +61,8 @@ function swtor_upgrade_nuke() {
  * Base class used by the migration objects. Used to setup some basic options.
  */
 abstract class SwtorMigration extends Migration {
-  protected $source_db = 'swtor_dk';
-  protected $source_path = '/home/cableman/drupal/swtor_dk/htdocs';
+  protected $source_db = 'swtor_old';
+  protected $source_path = '/home/www/aegir/tmp';
 
   public function __construct() {
     parent::__construct(MigrateGroup::getInstance('swtor'));
