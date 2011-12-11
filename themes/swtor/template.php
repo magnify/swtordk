@@ -211,3 +211,11 @@ function swtor_advanced_forum_reply_link(&$variables) {
     return theme('comment_post_forbidden', array('node' => $node));
   }
 }
+
+/**
+ * Implements hook_pathauto_alias_alter().
+ */
+function swtor_pathauto_alias_alter(&$alias, array &$context) {
+  // Force all aliases to be saved as language neutral.
+  $context['language'] = LANGUAGE_NONE;
+}
