@@ -49,5 +49,5 @@ After copying this file to your theme's folder and customizing it, remove this
 HTML comment.
 -->
 <?php foreach ($items as $delta => $item): ?>
-   | <span class="article article-tag <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></span>
+   - <span class="article article-tag <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></span>
 <?php endforeach; ?>
