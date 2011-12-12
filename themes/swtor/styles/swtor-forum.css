@@ -615,3 +615,7 @@ tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span.new {
   float: left;
   margin: 0 .5em 1.9em 0;
 }
+
+.forum-node-create-links-top {
+  padding: 20px 0;
+}
