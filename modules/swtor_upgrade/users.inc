@@ -42,8 +42,7 @@ class SwtorUsersMigration extends SwtorMigration {
 
     // This is a shortcut you can use when the source and destination fields are
     // identical
-    $this->addSimpleMappings(array('pass', 'theme', 'signature',
-                                   'signature_format', 'created', 'access',
+    $this->addSimpleMappings(array('pass', 'theme', 'signature', 'created', 'access',
                                    'login', 'status', 'timezone', 'language',
                                    'picture', 'init'));
 
@@ -52,6 +51,9 @@ class SwtorUsersMigration extends SwtorMigration {
          ->dedupe('users', 'name');
     $this->addFieldMapping('mail', 'mail')
          ->dedupe('users', 'mail');
+
+    // Fix signature format to allow user to edit the signature.
+    $this->addFieldMapping('signature_format', NULL);
 
     // Map fields loaded in prepare row.
     $this->addFieldMapping('field_fullname', 'fullname');
