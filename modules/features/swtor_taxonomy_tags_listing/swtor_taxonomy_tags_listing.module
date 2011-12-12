@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Taxonomy tags listing feature.
+ */
+
+include_once('swtor_taxonomy_tags_listing.features.inc');
