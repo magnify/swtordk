@@ -17,7 +17,7 @@
     <div class="center-left">
       <?php print $content['center_left']; ?>
     </div>
-    <div class="center-right sidebar-second grid-4">
+    <div class="center-right sidebar-second grid-4 alpha">
       <?php print $content['center_right']; ?>
     </div>
 </div>
