@@ -841,7 +841,7 @@ div.sidebar-second .view .views-field-field-user-picture {
 }
 
 #views_infinite_scroll_ajax_load_link a {
-  background: url('../images/arrow-down.png') no-repeat right 7px;
+  background: url('../images/arrow-down.png') no-repeat right 5px;
   padding: 0 15px 0 0;
 }
 
