@@ -1191,7 +1191,8 @@ span.cke_skin_kama {
 }
 
 
-.btn {
+.btn,
+input[type="submit"] {
   cursor: pointer;
   display: inline-block;
   background-color: #e6e6e6;
@@ -1294,9 +1295,6 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-
-
-
 
 .label {
   padding: 2px 5px 1px;
