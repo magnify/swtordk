@@ -1,0 +1,7 @@
+core = "7.x"
+dependencies[] = "page_manager"
+description = "Display articles by tags"
+features[ctools][] = "page_manager:pages_default:1"
+features[page_manager_handlers][] = "term_view_panel_context"
+name = "Taxonomy tags listing"
+package = "Features"
