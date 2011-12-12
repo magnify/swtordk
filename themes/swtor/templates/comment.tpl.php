@@ -60,7 +60,7 @@
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($new): ?>
-    <span class="new"><?php print $new ?></span>
+    <span class="label success new"><?php print $new ?></span>
   <?php endif; ?>
    
   <?php if ($comment->created): ?>
