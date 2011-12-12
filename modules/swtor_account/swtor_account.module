@@ -97,3 +97,8 @@ function swtor_account_preprocess_swtor_account(&$vars) {
   drupal_add_css(drupal_get_path('module', 'swtor_account') . '/css/swtor-account.css');
   drupal_add_js(drupal_get_path('module', 'swtor_account') . '/js/swtor-account.js');
 }
+
+function swtor_account_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $form['contact']['#access'] = FALSE;
+  $form['locale']['#access'] = FALSE;
+}
