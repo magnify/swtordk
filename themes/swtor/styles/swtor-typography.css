@@ -54,6 +54,12 @@ blockquote {
   padding-left: 40px;
 }
 
+blockquote.bb-quote-body {
+  background: url('../images/sprites.png') no-repeat -920px -31px #333;
+  margin: 1.5em;
+  padding: 20px 10px 2px 40px;
+}
+
 .node ul, 
 .node ol {
   margin-bottom: 0.5em;
