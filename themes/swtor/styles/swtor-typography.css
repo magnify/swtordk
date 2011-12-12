@@ -57,7 +57,7 @@ blockquote {
 blockquote.bb-quote-body {
   background: url('../images/sprites.png') no-repeat -920px -31px #333;
   margin: 1.5em;
-  padding: 20px 10px 2px 40px;
+  padding: 20px 10px 10px 40px;
 }
 
 .node ul, 
