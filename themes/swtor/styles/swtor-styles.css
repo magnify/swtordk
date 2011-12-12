@@ -12,6 +12,32 @@ img {
   max-width: 100%;
 }
 
+tbody {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+th {
+  background: url('../images/common-pattern.png');  
+  border-bottom: 1px solid #0e0e0e;
+  padding-right: 1em;
+  text-align: left;
+}
+
+tr.even,
+tr.odd {
+  border-bottom: 1px solid #0e0e0e;
+  background: #272727;
+  background: rgba(39, 39, 39, .85);
+}
+
+tr.odd {
+  background: #323233;
+  background: rgba(50, 50, 51, .85);
+}
+
 #header {
   background: url('../images/menu-line.png') no-repeat center 153px;
   position: relative;
@@ -707,7 +733,7 @@ input[type=radio] {
   display: block;
   font-size: 0.929em;
   float: left; /* not LTR */
-  padding: 0 15px 3px;
+  padding: 2px 15px 3px;
   margin: 0;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -755,14 +781,14 @@ input[type=radio] {
 }
 
 ul.action-links {
-  background-color: #2f2f2f;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
+  display: inline-block;
   list-style: none;
   margin: 0 0 15px;
-  padding: 10px 15px;
+  padding: 0;
 }
 
 .front ul.action-links {
@@ -1184,12 +1210,16 @@ span.cke_skin_kama {
     background-image: -o-linear-gradient(#e6db5b, #e6db5b 25%, #e6e6e6);
     background-image: linear-gradient(#e6db5b, #e6db5b 25%, #e6e6e6);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6db5b', endColorstr='#d3981c', GradientType=0);
-
     border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25);
     color: #684b0d;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+
+a.btn,
+a.btn:link {
+  color: #333;
+}
 
 .btn,
 input[type="submit"] {
@@ -1204,7 +1234,7 @@ input[type="submit"] {
   background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
   background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-  padding: 5px 14px 6px;
+  padding: 7px 14px 6px;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   color: #333;
   font-size: 13px;
@@ -1223,14 +1253,19 @@ input[type="submit"] {
   -o-transition: 0.1s linear all;
   transition: 0.1s linear all;
 }
-.btn:hover {
+
+.btn:hover,
+input[type="submit"]:hover {
   background-position: 0 -15px;
   color: #333;
   text-decoration: none;
 }
-.btn:focus {
+
+.btn:focus,
+input[type="submit"]:focus {
   outline: 1px dotted #666;
 }
+
 .btn.primary {
   color: #ffffff;
   background-color: #0064cd;
@@ -1276,6 +1311,7 @@ input[type="submit"] {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
 .btn.large {
   font-size: 15px;
   line-height: normal;
@@ -1284,13 +1320,16 @@ input[type="submit"] {
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
+
 .btn.small {
   padding: 7px 9px 7px;
   font-size: 11px;
 }
+
 :root .alert-message, :root .btn {
   border-radius: 0 \0;
 }
+
 button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -1329,4 +1368,181 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .resizable-textarea .grippie {
   background-color: #333;
   border-color: #333;
+}
+
+/*--- Private messages ---*/
+
+table.privatemsg-list {
+  width: 100%;
+}
+
+
+table.privatemsg-list th,
+table.privatemsg-list td {
+  padding: .5em 1em;
+}
+
+/*---
+  Temporary styling of action links.
+  Add class btn instead.
+---*/
+
+.action-links li a {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  padding: 7px 14px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.action-links li a:hover {
+  background-position: 0 -15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.action-links li a:focus {
+  outline: 1px dotted #666;
+}
+
+/*---
+  Temporary styling of buttons in forum.
+  Add class btn instead.
+---*/
+
+.forum-add-node .button,
+.topic-reply-link .button,
+.last-post-link .button,
+.forum-post-links .links a {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  padding: 7px 14px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.forum-post-links .links a span {
+  background: none;
+  line-height: 100%;
+  padding: 0;
+}
+
+.forum-add-node .button:hover,
+.forum-post-links .links a:hover {
+  background-position: 0 -15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.forum-add-node .button:focus,
+.forum-post-links .links a:focus {
+  outline: 1px dotted #666;
+}
+
+.forum-add-node .button,
+.topic-reply-link .button,
+.forum-post-links .links a {
+  background-color: #57a957;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#62c462), to(#57a957));
+  background-image: -moz-linear-gradient(top, #62c462, #57a957);
+  background-image: -ms-linear-gradient(top, #62c462, #57a957);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #62c462), color-stop(100%, #57a957));
+  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+  background-image: -o-linear-gradient(top, #62c462, #57a957);
+  background-image: linear-gradient(top, #62c462, #57a957);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462', endColorstr='#57a957', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #57a957 #57a957 #3d773d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.forum-add-node .button,
+.forum-add-node .button:hover,
+.topic-reply-link .button,
+.topic-reply-link .button:hover,
+.forum-post-links .links a,
+.forum-post-links .links a:hover {
+  color: #ffffff;
+}
+
+.forum-post-links .links.inline {
+  float: left;
+}
+
+.forum-post-links .links.inline li {
+  margin: 0 .5em 0 0;
+}
+
+.forum-post-links .links.inline li.last {
+  margin: 0;
+}
+
+.forum-post-links .links .quote a {
+  background-color: #d3981c;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6db5b), color-stop(25%, #e6db5b), to(#d3981c));
+  background-image: -webkit-linear-gradient(top, #e6db5b, #d3981c);
+  background-image: -moz-linear-gradient(top, #e6db5b, #e6db5b 25%, #d3981c);
+  background-image: -ms-linear-gradient(#e6db5b, #e6db5b 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#e6db5b, #e6db5b 25%, #e6e6e6);
+  background-image: linear-gradient(#e6db5b, #e6db5b 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6db5b', endColorstr='#d3981c', GradientType=0);
+  border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25);
+  color: #684b0d;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/*--- Form actions ---*/
+
+.form-actions {
+  text-align: right;
 }
