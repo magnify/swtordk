@@ -76,9 +76,9 @@ class SwtorForumMigration extends SwtorMigration {
          ->sourceMigration('SwtorUsers');
 
     // Map body and summary.
-    $body_arguments = MigrateTextFieldHandler::arguments(array('source_field' => 'teaser'), 'filtered_html', NULL);
-    $this->addFieldMapping('body', 'body')
-         ->arguments($body_arguments);
+    //$body_arguments = MigrateTextFieldHandler::arguments(array('source_field' => 'teaser'), 'filtered_html', NULL);
+    $this->addFieldMapping('body', 'body');;
+//         ->arguments($body_arguments);
     $this->addFieldMapping(NULL, 'teaser');
 
     // Map taxonomy form.
