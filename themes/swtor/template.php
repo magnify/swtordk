@@ -98,7 +98,7 @@ function swtor_preprocess_views_view_field(&$vars) {
   $view = $vars['view'];
   $field = $vars['field'];
   // In the media_detail view, replace nid field with a fb like button
-  if (module_exists('fb_social') && ($view->name == 'frontpage') && $field->field == 'nid') {
+  if (module_exists('fb_social') && ($view->name == 'frontpage' || $view->name == 'taxonomy_tags_listing') && $field->field == 'nid') {
     // Create a "pseudo-node" object to send to fb_social_like_link
     $row = $vars['row'];
     $pnode = new stdClass();
