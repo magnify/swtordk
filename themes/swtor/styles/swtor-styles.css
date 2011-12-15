@@ -841,7 +841,7 @@ div.sidebar-second .view .views-field-field-user-picture {
 }
 
 #views_infinite_scroll_ajax_load_link a {
-  background: url('../images/arrow-down.png') no-repeat right 7px;
+  background: url('../images/arrow-down.png') no-repeat right 5px;
   padding: 0 15px 0 0;
 }
 
@@ -1437,6 +1437,7 @@ table.privatemsg-list td {
 .forum-add-node .button,
 .topic-reply-link .button,
 .last-post-link .button,
+.topic-new-post-link .button,
 .forum-post-links .links a {
   cursor: pointer;
   display: inline-block;
@@ -1512,6 +1513,7 @@ table.privatemsg-list td {
 .forum-post-links .links a,
 .forum-post-links .links a:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 
 .forum-post-links .links.inline {
@@ -1545,4 +1547,27 @@ table.privatemsg-list td {
 
 .form-actions {
   text-align: right;
+}
+
+/*--- Temporary labels ---*/
+
+#forum .views-field-title .marker {
+  padding: 2px 5px 1px;
+  font-size: 9.75px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #bfbfbf;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#forum .views-field-title .marker {
+  background-color: #c43c35;
+}
+
+.forum-post-content .tweetbutton {
+  display: none !important;
 }

@@ -300,12 +300,14 @@ div.forum-post {
 
 .forum-topic-legend {
   clear: both;
+  padding: 1.25em 0 0;
 }
 
 .forum-topic-legend div {
   clear: none;
   display: inline;
   margin: 0 .5em 0 0;
+  padding: 4px 0 15px 30px;
 }
 
 .forum-post-links {
@@ -615,3 +617,13 @@ tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span.new {
   float: left;
   margin: 0 .5em 1.9em 0;
 }
+
+.forum-node-create-links-top {
+  clear: none;
+  padding: 20px 0;
+}
+
+.forum-tools {
+  margin-top: 20px;
+}
+
