@@ -42,6 +42,10 @@
       <?php print $header; ?>
     </div>
   <?php endif; ?>
+  
+  <?php if (!empty($forum_tools)): ?>
+    <div class="forum-tools"><?php print $forum_tools; ?></div>
+  <?php endif; ?>  
 
   <?php if ($exposed): ?>
     <div class="view-filters">
