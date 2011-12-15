@@ -203,6 +203,10 @@ function swtor_frontpage_views_default_views() {
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'article';
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -547,11 +551,15 @@ function swtor_frontpage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Frontpage pane (Bottom)', 'frontpage_articles_bottom');
   $handler->display->display_options['display_description'] = 'Display articles without pager';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '4';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
+  $handler->display->display_options['pager']['options']['infinite_scroll'] = array(
+    'method' => '1',
+    'link_text' => 'More articles',
+  );
   $handler->display->display_options['pane_title'] = 'Front page articles (bottom)';
   $handler->display->display_options['pane_description'] = 'Front page articles with pager';
   $handler->display->display_options['pane_category']['name'] = 'Article panes';

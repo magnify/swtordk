@@ -293,7 +293,7 @@ function swtor_frontpage_default_page_manager_pages() {
       'offset' => '4',
       'override_title' => 0,
       'override_title_text' => '',
-      'items_per_page' => '6',
+      'items_per_page' => '5',
     );
     $pane->cache = array();
     $pane->style = array(
