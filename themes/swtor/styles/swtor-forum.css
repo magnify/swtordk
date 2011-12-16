@@ -45,12 +45,26 @@ Colors used:
 
 .forum-pager .pager a.active,
 #forum-comments .pager a.active {
-  color: #333333;
+  color: #ffba00;
 }
 
 .forum-pager .pager,
 .forum-comment-wrapper .pager {
   width: auto;
+}
+
+#forum-pager-top .pager {
+  margin: 10px 0 0;
+}
+
+#forum-comments .pager li {
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+
+#forum-comments .pager li.pager-current {
+  margin: -2px 0 0;
+  padding: 2px 9px;  
 }
 
 /*** FORUM & TOPIC LISTS ******************************************************/
@@ -345,6 +359,7 @@ div.forum-post {
 
 #forum table a,
 #forum .pager a,
+#forum .pager a.active,
 #forum table a:link,
 #forum .pager a:link {
   color: #ffba00;
@@ -624,6 +639,11 @@ tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span.new {
 }
 
 .forum-tools {
-  margin-top: 20px;
+  float: none;
+  text-align: right;
 }
 
+h2.title.comment-form {
+  clear: both;
+  padding: 20px 0 0;
+}
