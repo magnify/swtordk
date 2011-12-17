@@ -830,7 +830,9 @@ div.sidebar-second .view .item-list img {
 }
 
 div.sidebar-second .view .views-field-field-image-url,
-div.sidebar-second .view .views-field-field-user-picture {
+div#sidebar-second .view .views-field-field-image-url,
+div.sidebar-second .view .views-field-field-user-picture,
+div#sidebar-second .view .views-field-field-user-picture {
   float: left;
 }
 
