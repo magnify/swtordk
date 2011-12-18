@@ -52,6 +52,22 @@ tr.odd {
   top: 12px;
 }
 
+/*--- Search ---*/
+
+#search-block-form {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+#search-block-form input[type="text"] {
+  min-width: 200px;
+}
+
+#search-block-form input[type="submit"] {
+  padding: 6px 14px 5px;
+}
+
 /*--- AdSense ---*/
 
 .region-pagetop {
@@ -1217,6 +1233,20 @@ span.cke_skin_kama {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+.btn.dark {
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), color-stop(25%, #333), to(#666));
+    background-image: -webkit-linear-gradient(top, #333, #666);
+    background-image: -moz-linear-gradient(top, #333, #333 25%, #666);
+    background-image: -ms-linear-gradient(#333, #333 25%, #666);
+    background-image: -o-linear-gradient(#333, #333 25%, #666);
+    background-image: linear-gradient(#333, #333 25%, #666);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='#666', GradientType=0);
+    border-color: #3D3D3D;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
 
 a.btn,
 a.btn:link {
