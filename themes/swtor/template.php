@@ -219,3 +219,28 @@ function swtor_pathauto_alias_alter(&$alias, array &$context) {
   // Force all aliases to be saved as language neutral.
   $context['language'] = LANGUAGE_NONE;
 }
+
+/**
+ * Add user picture to forum posts.
+ */
+function swtor_advanced_forum_simple_author_pane(&$variables) {
+  $context = $variables['context'];
+  // Sending the context rather than the account makes it work for anon comments.
+  $name = theme('username', array('account' => $context));
+  $account = user_load($context->uid);
+
+  $uri = '';
+  if (isset($account->field_user_picture['und'][0]['uri'])) {
+    $uri = $account->field_user_picture['und'][0]['uri'];
+    $image = array(
+      'style_name' => 'user_picture',
+      'path' => $uri,
+      'attributes' => array('class' => 'picture'),
+    );
+    $picture = theme('image_style', $image);
+  }
+  else {
+    $picture = '<img class="picture" width="45" height="45" alt="" src="/' . drupal_get_path('theme', 'swtor') . '/images/user-default.png' . '" typeof="foaf:Image">';
+  }
+  return '<div class="author-pane">' . $name . $picture . '</div>';
+}
