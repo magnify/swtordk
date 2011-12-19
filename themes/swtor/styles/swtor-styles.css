@@ -1,5 +1,5 @@
 html {
-  background: #191919 url('../images/repeat-bg.png') repeat-x fixed center top;
+  background: #000;
   height: 100%; /* Important for 100% body height*/
 }
 
@@ -287,8 +287,8 @@ tr.odd {
 /*--- Content ---*/
 
 #content {
-  background: url('../images/transparent-black-50.png');
-  background: rgba(0, 0, 0, .5);
+  background: url('../images/transparent-black-75.png');
+  background: rgba(0, 0, 0, .75);
   -moz-border-radius: 12px 12px 0 0;
   -webkit-border-radius: 12px 12px 0 0;
   border-radius: 12px 12px 0 0;
