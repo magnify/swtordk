@@ -73,8 +73,8 @@ function dynamic_background_upload_form_process($element, &$form_state, $form) {
     $image = array(
       'style_name' => 'thumbnail',
       'path' => $element['#value']['picture'],
-      'alt' => t('Image preview'),
-      'title' => t('Image preview'),
+      'alt' => basename($element['#value']['picture']),
+      'title' => basename($element['#value']['picture']),
     );
     $picture = theme('image_style', $image);
     $element['current_picture'] = array(

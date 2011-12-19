@@ -490,8 +490,8 @@ function dynamic_background_image_selector_form($type = 'default', $data = -1) {
     $thumb = array(
       'style_name' => 'thumbnail',
       'path' => $image,
-      'alt' => t('Image preview'),
-      'title' => t('Image preview'),
+      'alt' => basename($image),
+      'title' => basename($image),
     );
     $thumb = theme('image_style', $thumb);
 
@@ -649,7 +649,7 @@ function dynamic_background_active_image($type = 'default', $data = -1) {
   $query->join('file_managed', 'fm', 'dbu.fid = fm.fid');
   $query->fields('dbu', array('fid'))
         ->fields('fm', array('uri'))
-        ->condition('type', $type, '=')
+        ->condition('dbu.type', $type, '=')
         ->condition('data', $data, '=');
   return $query->execute()->fetchObject();
 }
