@@ -67,11 +67,11 @@ function dynamic_background_user_form($form, $form_state, $user) {
     // Add user upload form.
     $upload_form = dynamic_background_user_upload_form('user', $user->uid, $no_of_images);
     $form['dynamic_background'] += $upload_form['form'];
+
+    // Add validation function.
+    $form['#validate'][] = $upload_form['validate'];
   }
   
-  // Add validation function.
-  $form['#validate'][] = $upload_form['validate'];
-
   // Submit handler.
   $form['submit'] = array(
     '#type' => 'submit',

@@ -49,10 +49,10 @@ function dynamic_background_panels_form_alter(&$form, $form_state, $form_id) {
       // Add user upload form.
       $upload_form = dynamic_background_user_upload_form('panels', $pid, $no_of_images);
       $form['conf']['dynamic_background'] += $upload_form['form'];
-    }
 
-    // Add validation function.
-    $form['#validate'][] = $upload_form['validate'];
+      // Add validation function.
+      $form['#validate'][] = $upload_form['validate'];
+    }
 
     // Add extra submit handler.
     $form['#submit'][] = 'dynamic_background_panels_conf_submit_handler';

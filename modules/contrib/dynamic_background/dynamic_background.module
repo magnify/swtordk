@@ -452,7 +452,6 @@ function dynamic_background_create_css($images_conf, $reset = FALSE) {
       }\n";
     }
   }
-
   return $css;
 }
 

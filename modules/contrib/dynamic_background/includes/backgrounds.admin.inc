@@ -15,7 +15,7 @@ function dynamic_background_admin_images($form, &$form_state) {
   $settings = variable_get('dynamic_background_setting', array());
   if (empty($settings)) {
     drupal_set_message(t('You have not yet configured "Dynamic background". Click <a href="@link">here</a> to configure it.',
-              array('@link' => url('admin/config/user-interface/backgrounds/settings'))));
+              array('@link' => url('admin/config/user-interface/backgrounds/default'))), 'warning');
     return;
   }
 

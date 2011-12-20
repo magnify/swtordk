@@ -84,13 +84,13 @@ function dynamic_background_node_form_alter(&$form, &$form_state, $form_id) {
         // Add user upload form.
         $upload_form = dynamic_background_user_upload_form('node', $nid, $no_of_images);
         $form['additional_settings']['dynamic_background'] += $upload_form['form'];
+
+        // Add validation function.
+        $form['#validate'][] = $upload_form['validate'];
       }
 
       // Add some style to the image selection.
       drupal_add_css(drupal_get_path('module', 'dynamic_background_node') . '/css/dynamic_background_node.admin.css', 'module');
-
-      // Add validation function.
-      $form['#validate'][] = $upload_form['validate'];
     }
   }
 }
@@ -130,7 +130,7 @@ function dynamic_background_node_node_delete($node) {
  */
 function dynamic_background_set_active_node_image($node) {
   $settings = variable_get('dynamic_background_node', array());
-  if (isset($settings['settings']['content_types']) && $settings['settings']['content_types'][$node->type]) {
+  if (isset($settings['settings']['content_types']) && $settings['settings']['content_types'][$node->type] && isset($node->dynamic_background)) {
     // Look through the form to find selected image, if any.
     $is_selected = FALSE;
     foreach ($node->dynamic_background as $fid => $element) {
