@@ -1581,6 +1581,10 @@ table.privatemsg-list td {
   text-align: right;
 }
 
+.form-actions input[type="submit"] {
+  margin-left: .5em;
+}
+
 /*--- Temporary labels ---*/
 
 #forum .views-field-title .marker {
