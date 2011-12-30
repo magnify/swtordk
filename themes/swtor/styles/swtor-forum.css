@@ -653,3 +653,7 @@ h2.title.comment-form {
   clear: both;
   padding: 20px 0 0;
 }
+
+.page-node-add-forum .preview {
+  display: none;
+}
