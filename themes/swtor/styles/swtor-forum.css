@@ -654,6 +654,7 @@ h2.title.comment-form {
   padding: 20px 0 0;
 }
 
-.page-node-add-forum .preview {
+.page-node-add-forum .preview h3,
+.page-node-add-forum .preview .node-preview {
   display: none;
 }
