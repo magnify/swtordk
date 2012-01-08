@@ -24,7 +24,12 @@
 <?php if ($top_post): ?>
   <?php print $topic_header ?>
 <?php endif; ?>
-
+<?php
+// Add role as class to the forum post.
+foreach ($account->roles as $role) {
+  $classes .= ' ' . str_replace(' ', '-', $role);
+}
+?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <div class="forum-post-info clearfix">
     <div class="forum-posted-on">
