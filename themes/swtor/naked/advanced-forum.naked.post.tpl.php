@@ -75,35 +75,37 @@ foreach ($account->roles as $role) {
     </div>
 
     <div class="forum-post-panel-main clearfix">
-      <?php if (!empty($title)): ?>
-        <div class="forum-post-title">
-          <?php print $title ?>
-        </div>
-      <?php endif; ?>
+      <div class="forum-post-content-wrapper">
+        <?php if (!empty($title)): ?>
+          <div class="forum-post-title">
+            <?php print $title ?>
+          </div>
+        <?php endif; ?>
 
-      <div class="forum-post-content">
-        <?php
-          // We hide the comments and links now so that we can render them later.
-          hide($content['taxonomy_forums']);
-          hide($content['comments']);
-          hide($content['links']);
-          if (!$top_post)
-            hide($content['body']);
-          print render($content);
-        ?>
+        <div class="forum-post-content">
+          <?php
+            // We hide the comments and links now so that we can render them later.
+            hide($content['taxonomy_forums']);
+            hide($content['comments']);
+            hide($content['links']);
+            if (!$top_post)
+              hide($content['body']);
+            print render($content);
+          ?>
+        </div>
+
+        <?php if (!empty($post_edited)): ?>
+          <div class="post-edited">
+            <?php print $post_edited ?>
+          </div>
+        <?php endif; ?>
+
+        <?php if (!empty($signature)): ?>
+          <div class="author-signature">
+            <?php print $signature ?>
+          </div>
+        <?php endif; ?>
       </div>
-
-      <?php if (!empty($post_edited)): ?>
-        <div class="post-edited">
-          <?php print $post_edited ?>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($signature)): ?>
-        <div class="author-signature">
-          <?php print $signature ?>
-        </div>
-      <?php endif; ?>
     </div>
   </div> <?php // End of post wrapper div ?>
 
