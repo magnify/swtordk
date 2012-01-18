@@ -5,6 +5,7 @@ html {
 
 body {
   background: url('../images/background.jpg') no-repeat fixed center top;
+  background-size: cover;
   min-height: 100%;
 }
 
@@ -587,7 +588,7 @@ input[type=radio] {
   background-color: #f5f19d;
 }
 
-/*--- Pagen node ---*/
+/*--- Page node ---*/
 
 .page-node .share-links {
   display: block;
@@ -612,6 +613,12 @@ input[type=radio] {
 
 .page-node ul.links li {
   padding: 0;
+}
+
+/*--- Unpublished node ---*/
+
+.node-unpublished {
+  background: transparent url('../images/unpublished.png');
 }
 
 /*--- Frontpage articles ---*/
