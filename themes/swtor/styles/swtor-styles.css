@@ -5,6 +5,7 @@ html {
 
 body {
   background: url('../images/background.jpg') no-repeat fixed center top;
+  background-size: cover;
   min-height: 100%;
 }
 
