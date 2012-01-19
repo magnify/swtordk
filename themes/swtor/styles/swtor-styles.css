@@ -1628,7 +1628,7 @@ div.messages {
 
 div.status {
   border-color: #BBEE77;
-
+}
   
 div.status,
 .ok {
@@ -1674,4 +1674,13 @@ div.messages ul {
 
 div.messages ul li {
     list-style-image: none;
+}
+
+
+/*--- Dynamic background ---*/
+
+#edit-dynamic-background-dynamic-background-picture-upload .form-type-background-upload-form,
+#edit-dynamic-background .form-type-background-upload-form {
+  background: #333;
+  border: 1px solid #111;
 }
