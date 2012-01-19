@@ -33,7 +33,14 @@ foreach ($account->roles as $role) {
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <div class="forum-post-info clearfix">
     <div class="forum-posted-on">
-      <?php print date_format_date(new DateObject($node->changed), 'custom', 'D d/m/Y H:i') ?>
+      <?php
+        if ($top_post) {
+          print date_format_date(new DateObject($node->changed), 'custom', 'D d/m/Y H:i');
+        }
+        else {
+          print $date;
+        }
+      ?>
       <?php
       // This whole section is for printing the "new" marker. With core comment
       // we just need to check a variable. With Node Comment, we need to do
