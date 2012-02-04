@@ -397,6 +397,7 @@ label {
 textarea,
 select,
 input[type=text],
+input[type=email],
 input[type=file],
 input[type=password] {
   background-color: #1d1e1d;
@@ -1683,4 +1684,19 @@ div.messages ul li {
 #edit-dynamic-background .form-type-background-upload-form {
   background: #333;
   border: 1px solid #111;
+}
+
+/*--- MailChimp ---*/
+
+#mce-EMAIL {
+  margin: 1em 0;
+  width: 93%;
+}
+
+#mc-embedded-subscribe {
+  float: right;
+  margin: 0 1em 0 0;
+}
+
+#mc-embedded-subscribe:after {
 }
