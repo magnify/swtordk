@@ -155,9 +155,9 @@
       <?php if ($page['column_four_one'] || $page['column_four_two'] || $page['column_four_three'] || $page['column_four_four']): ?>
         <div id="columns-four" class="region columns-four container-12">
           <div id="columns-three-one" class="column columns-four-one grid-3"><?php print render($page['column_four_one']); ?></div>
-          <div id="columns-three-two" class="column columns-three-two grid-3"><?php print render($page['column_four_two']); ?></div>
+          <div id="columns-three-two" class="column columns-four-two grid-3"><?php print render($page['column_four_two']); ?></div>
           <div id="columns-three-three" class="column columns-four-three grid-3"><?php print render($page['column_four_three']); ?></div>
-          <div id="columns-three-three" class="column columns-four-three grid-3"><?php print render($page['column_four_four']); ?></div>
+          <div id="columns-three-three" class="column columns-four-four grid-3"><?php print render($page['column_four_four']); ?></div>
         </div>
       <?php endif; ?>
     </div></div> <!-- /.section, /#content -->

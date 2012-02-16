@@ -993,6 +993,10 @@ div.block-nodespotbox h2,
 
 /*--- Column regions ---*/
 
+.columns-four-one {
+  margin-left: 0;
+}
+
 .columns-three,
 .columns-four {
   background: url('../images/common-pattern-hori-small.png') no-repeat;
