@@ -638,16 +638,24 @@ tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span.new {
   background-position: -421px -2031px;
 }
 
-#forum-47 .forum-list-icon-wrapper span {
-  background-position: -2100px -350px;
-}
-
 #subcontainer-46 .forum-list-icon-new-posts .forum-list-icon-wrapper span {
   background-position: -361px -2091px;
 }
 
+#forum-47 .forum-list-icon-wrapper span {
+  background-position: -2100px -350px;
+}
+
 #forum-47 .forum-list-icon-new-posts .forum-list-icon-wrapper span {
   background-position: -2040px -410px;
+}
+
+#forum-106 .forum-list-icon-wrapper span {
+  background-position: -2274px -175px;
+}
+
+#forum-106 .forum-list-icon-new-posts .forum-list-icon-wrapper span {
+  background-position: -2332px -117px;
 }
 
 .forum-topic-header .topic-reply-link {
