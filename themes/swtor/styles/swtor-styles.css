@@ -1055,6 +1055,8 @@ div.block-nodespotbox h2,
 .node .content-gallery .field-items a {
   border: 3px solid #505050;
   float: left;
+  max-height: 75px;
+  overflow: hidden;
 }
 
 .node .content-gallery .field-items a:hover {
